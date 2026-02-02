@@ -6,7 +6,7 @@ export default sxzz(
     vue: true,
     prettier: true
   },
-  presetJavaScript(),
+  presetJavaScript,
   [
     {
       plugins: {

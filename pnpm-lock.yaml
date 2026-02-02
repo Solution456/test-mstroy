@@ -8,6 +8,15 @@ importers:
 
   .:
     dependencies:
+      ag-grid-community:
+        specifier: ^35.0.1
+        version: 35.0.1
+      ag-grid-enterprise:
+        specifier: ^35.0.1
+        version: 35.0.1
+      ag-grid-vue3:
+        specifier: ^35.0.1
+        version: 35.0.1(vue@3.5.27(typescript@5.9.3))
       vue:
         specifier: ^3.5.27
         version: 3.5.27(typescript@5.9.3)
@@ -1015,6 +1024,32 @@ packages:
     resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+
+  ag-charts-community@13.0.1:
+    resolution: {integrity: sha512-N9DSUcpRFIWjXu1g1za18rZdumI1u1bEBuseL+Rh2ldNk/prKCdZifwo4Tsck0jnVDljyXh/G29nbmzmoXmdHQ==}
+
+  ag-charts-core@13.0.1:
+    resolution: {integrity: sha512-z6hqKW22nWoIBQJwcd62Z6nMdBE9uc0VLYVAmNdyHbc5qLkcln2s6zGWOo3Y0QIifdDM1dr4ZXcyVjGHudAVtw==}
+
+  ag-charts-enterprise@13.0.1:
+    resolution: {integrity: sha512-70InfMENfHSIoYVrQ9yKbXQCb9uA5qlYOnkYb6yjPFykE6ZSSuOGRI+dFNXQYAbC00wPJKgToX2jXQl5F4+UMA==}
+
+  ag-charts-locale@13.0.1:
+    resolution: {integrity: sha512-hr2qFe/rQSJVaRWu+Pj9CfbT5Xb7isHqqrW9eOnXFwkkGZTVM1zJai8DyMcrurC9kbRV2e3cf0toQnHkAzsxdg==}
+
+  ag-charts-types@13.0.1:
+    resolution: {integrity: sha512-qg9adyiAaeUaDtWZEEPF45dv55kdJTe6Ghi0EQXCS79h/7KvOd6dxhqGZjPL1zeFl/L9qEXuYgb+LkGStq4mgQ==}
+
+  ag-grid-community@35.0.1:
+    resolution: {integrity: sha512-fYYZdymWKsN9/tZv+R6uZRnuiWYEQr+GHl85ZrB0ixbFcE8opYK4NJI29NnMc9ShYiCBnAO9hj54IFa+FI4aDA==}
+
+  ag-grid-enterprise@35.0.1:
+    resolution: {integrity: sha512-9mLwf9Bq7+H3EdB6CDO7WqJMQ/YbtpbF+jfX+G8kr9o/m6vgL46E8h7DIEg7gE6QS+IlfY9byLtgoNU8P1PeyQ==}
+
+  ag-grid-vue3@35.0.1:
+    resolution: {integrity: sha512-SE7wZPXiKHXfTSfzJDra+bnN/obmizLCkeri91b8v1Wy7ypza+NqApjMRiXAeZEUCaJqy2ZHv0r/oHIzxx7vJQ==}
+    peerDependencies:
+      vue: ^3.5.0
 
   agent-base@7.1.4:
     resolution: {integrity: sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==}
@@ -3731,6 +3766,45 @@ snapshots:
       acorn: 8.15.0
 
   acorn@8.15.0: {}
+
+  ag-charts-community@13.0.1:
+    dependencies:
+      ag-charts-core: 13.0.1
+      ag-charts-locale: 13.0.1
+      ag-charts-types: 13.0.1
+    optional: true
+
+  ag-charts-core@13.0.1:
+    dependencies:
+      ag-charts-types: 13.0.1
+    optional: true
+
+  ag-charts-enterprise@13.0.1:
+    dependencies:
+      ag-charts-community: 13.0.1
+      ag-charts-core: 13.0.1
+    optional: true
+
+  ag-charts-locale@13.0.1:
+    optional: true
+
+  ag-charts-types@13.0.1: {}
+
+  ag-grid-community@35.0.1:
+    dependencies:
+      ag-charts-types: 13.0.1
+
+  ag-grid-enterprise@35.0.1:
+    dependencies:
+      ag-grid-community: 35.0.1
+    optionalDependencies:
+      ag-charts-community: 13.0.1
+      ag-charts-enterprise: 13.0.1
+
+  ag-grid-vue3@35.0.1(vue@3.5.27(typescript@5.9.3)):
+    dependencies:
+      ag-grid-community: 35.0.1
+      vue: 3.5.27(typescript@5.9.3)
 
   agent-base@7.1.4: {}
 
