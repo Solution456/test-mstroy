@@ -1,0 +1,53 @@
+# ============================================
+# Docker ignore — файлы, которые не должны попасть в Docker image
+# ============================================
+
+# Dependencies (устанавливаются внутри контейнера)
+node_modules
+.pnpm-store
+.yarn
+.yarn/cache
+
+# Build outputs
+dist
+build
+out
+.cache
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE и редакторы
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+.gitattributes
+.github
+
+# Docker (эти файлы не нужны внутри контейнера)
+docker-compose.yml
+.dockerignore
+docker
+
+# Testing
+coverage
+.nyc_output
+*.log
+
+# Documentation
+*.md
+!README.md
+
+# Misc
+.eslintrc
+.prettierrc
